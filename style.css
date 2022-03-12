@@ -55,16 +55,6 @@ label.tab{
   cursor: pointer;
 }
 
-/* .tab::before{
-  content: '\f090';
-  font-family: 'FontAwesome', sans-serif;
-  font-size: 24px;
-  margin-right: 11px;
-  font-weight: normal;
-}
-.tab[for*='2']::before{
-  content:'\f234';
-} */
 label.tab.active{
   background: #fff;
   color:#1b5f75;
@@ -90,8 +80,3 @@ a.button{
   margin-bottom: 10px;
 }
 
-.recover{
-  outline: 1px solid orange;
-  margin-top:15px;
-  font-size: 12px;
-}

@@ -8,25 +8,25 @@
   </head>
   <body>
   <div class="wrapper">
-    <div class='form'>
-      <label class="tab active" title="page1">Авторизация</label>
-      <label class="tab " title="page2">Регистрация</label>
+    <div class='form' id='mainForm'>
+      <label class="tab active" id="aut" title="authorization">Авторизация</label>
+      <label class="tab inactive" id="reg" title="registration">Регистрация</label>
 
-      <form class="tab-form">
-        <input class="tab" type="email" placeholder="Введите Email">
-        <input class="tab" type="password" placeholder="Введите пароль">
+      <form class="tab-form active" id="page1">
+        <input class="input" type="email" placeholder="Введите Email">
+        <input class="input" type="password" placeholder="Введите пароль">
         <a href="#" class="button">Войти</a>
       </form>
-      <form class="tab-form del">
-        <input type="email" placeholder="Введите Email адрес">
-        <input type="text" placeholder="Введите свое имя">
-        <input type="password" placeholder="Введите пароль">
+      <form class="tab-form inactive" id="page2">
+        <input class="input" type="email" placeholder="Введите Email адрес">
+        <input class="input" type="text" placeholder="Введите свое имя">
+        <input class="input" type="password" placeholder="Введите пароль">
         <a href="#" class="button">Регистрация</a>
 
-        <div class="recover">
-          <input type="checkbox">
-          <label>Ознакомлена и принимаю<a href="#"> условия регистрации</a></label>
-        </div>
+        <!-- <div class="recover">
+          <input type="checkbox" id="ckbox">
+          <label for='ckbox'>Ознакомлен(-а) и принимаю<a href="#"> условия регистрации</a></label>
+        </div> -->
       </form>
     </div>
   </div>

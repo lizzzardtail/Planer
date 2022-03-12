@@ -4,7 +4,7 @@ body{
   margin:0;
   padding:0;
   font-family: Roboto, sans-serif;
-  background-color: green;
+  background-color: #195244;
 }
  .wrapper{
   display:flex;
@@ -39,6 +39,11 @@ body{
 }
 .tab-form{
   background-color: #fff;
+  display:none;
+  padding: 30px 20px 20px;
+}
+.tab-form.active{
+  display:block;
 }
 label.tab{
   color:#ffffff;
@@ -49,7 +54,44 @@ label.tab{
   margin-bottom: -1px;
   cursor: pointer;
 }
+
+/* .tab::before{
+  content: '\f090';
+  font-family: 'FontAwesome', sans-serif;
+  font-size: 24px;
+  margin-right: 11px;
+  font-weight: normal;
+}
+.tab[for*='2']::before{
+  content:'\f234';
+} */
 label.tab.active{
   background: #fff;
   color:#1b5f75;
+}
+.input{
+  font-size: 16px;
+  border:2px solid #e9eaea;
+  padding:12px 14px;
+  box-sizing: border-box;
+  margin-bottom: 22px;
+  color: #1e8da6;
+  outline: none;
+}
+a.button{
+  background: #298cad;
+  color: #ffffff;
+  font-size: 18px;
+  text-transform:uppercase;
+  display:block;
+  text-align: center;
+  line-height: 46px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.recover{
+  outline: 1px solid orange;
+  margin-top:15px;
+  font-size: 12px;
 }

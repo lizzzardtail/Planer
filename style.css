@@ -68,7 +68,7 @@ label.tab.active{
   color: #1e8da6;
   outline: none;
 }
-a.button{
+input.button{
   background: #298cad;
   color: #ffffff;
   font-size: 18px;
@@ -79,4 +79,3 @@ a.button{
   margin-top: 30px;
   margin-bottom: 10px;
 }
-

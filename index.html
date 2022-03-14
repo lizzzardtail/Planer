@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Форма для авторизации</title>
-     <script src="script.js"></script>
+    {% load static %}
     <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="script.js"></script>
   </head>
   <body>
   <div class="wrapper">
@@ -12,21 +13,20 @@
       <label class="tab active" id="aut" title="authorization">Авторизация</label>
       <label class="tab inactive" id="reg" title="registration">Регистрация</label>
 
-      <form class="tab-form active" id="page1">
-        <input class="input" type="email" placeholder="Введите Email">
-        <input class="input" type="password" placeholder="Введите пароль">
-        <a href="#" class="button">Войти</a>
+      <form class="tab-form active" action="{% url 'plan:logprocess' %}" id="page1" method="POST">
+        {% csrf_token %}
+        <input class="input" type="text" name="user_name" id="uname" placeholder="Введите логин" required>
+        <input class="input" type="password" name="user_password" id="upass" placeholder="Введите пароль" required>
+        <input class="button" type="submit" value="Войти">
       </form>
-      <form class="tab-form inactive" id="page2">
-        <input class="input" type="email" placeholder="Введите Email адрес">
-        <input class="input" type="text" placeholder="Введите свое имя">
-        <input class="input" type="password" placeholder="Введите пароль">
-        <a href="#" class="button">Регистрация</a>
+      <form class="tab-form inactive" action="{% url 'plan:regprocess' %}" id="page2" method="POST">
+        {% csrf_token %}
+        <input class="input" type="email" name="user_mail" id="umail" placeholder="Введите Email адрес" required>
+        <input class="input" type="text" name="user_name" id="uname" placeholder="Введите свое имя" required>
+        <input class="input" type="password" name="user_password" id="upass" placeholder="Введите пароль" required>
+        <input class="button" type="submit" value="Регистрация">
 
-        <!-- <div class="recover">
-          <input type="checkbox" id="ckbox">
-          <label for='ckbox'>Ознакомлен(-а) и принимаю<a href="#"> условия регистрации</a></label>
-        </div> -->
+
       </form>
     </div>
   </div>
